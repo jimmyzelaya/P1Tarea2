@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P1Tarea2.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+            <Label Text="PM02" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Label Text="Tarea 2" FontSize="Title" Padding="30,10,20,0"/>
+        <Label Text="App elaborada por Jimmy " FontSize="14" Padding="30,0,20,20"/>
+
+
+        <Label Text="Nombres" FontSize="20" Padding="5,0,0,0"/>
+        <Entry x:Name="nombre" Placeholder="Ingrese Nombres" Keyboard="Text" Margin="5,0,0,0" FontSize="14" />
+
+        <Label Text="Apellidos" FontSize="20" Padding="5,0,0,0"/>
+        <Entry x:Name="apellido" Placeholder="Ingrese Apellidos" Keyboard="Text" Margin="5,0,0,0" FontSize="14"/>
+
+        <Label Text="Edad" FontSize="20" Padding="5,0,0,0"/>
+        <Entry x:Name="edad" Placeholder="Ingrese Edad" Keyboard="Numeric" Margin="5,0,0,0" FontSize="14"/>
+
+        <Label Text="Correo Electronico" FontSize="20" Padding="5,0,0,0"/>
+        <Entry x:Name="correo" Placeholder="Ingrese Correo" Keyboard="Text" Margin="5,0,0,0" FontSize="14"/>
+
+        <Label Text="Dirección" FontSize="20" Padding="5,0,0,0"/>
+        <Entry x:Name="direccion" Placeholder="Ingrese Dirección" Keyboard="Text" Margin="5,0,0,0" FontSize="14"/>
+
+        <Button Text="LIMPIAR" x:Name="btnLimpiar" Clicked="btnLimpiar_Clicked" BackgroundColor="Gold"/>
+        <Button Text="SALVAR" x:Name="btnAgregar" Clicked="btnAgregar_Clicked" BackgroundColor="Gold"/>
+        <Button Text="LISTA" x:Name="btnLista" Clicked="btnLista_Clicked" BackgroundColor="Gold"/>
+    </StackLayout>
+
+</ContentPage>

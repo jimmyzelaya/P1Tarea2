@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P1Tarea2.Paginas.PageLista">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar" x:Name="toolAgregar" Clicked="toolAgregar_Clicked"/>
+
+        <ToolbarItem Text="Actualizar" x:Name="toolActualizar" Clicked="toolActualizar_Clicked"/>
+
+        <ToolbarItem Text="Eliminar" x:Name="toolEliminar" Clicked="toolEliminar_Clicked" CommandParameter="{Binding .}"/>
+    </ContentPage.ToolbarItems>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <CollectionView x:Name="ListaPersonas"
+                            Margin="20"
+                            SelectionMode="Single"
+                            SelectionChanged="ListaPersonas_SelectionChanged">
+                <CollectionView.ItemsLayout>
+
+                    <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="5"/>
+
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+                        
+                            <StackLayout BackgroundColor="#2E4053">
+                                <Label Text="{Binding Nombre}"/>
+                                <Label Text="{Binding Apellidos}"/>
+                                <Label Text="{Binding Edad}"/>
+                                <Label Text="{Binding Correo}"/>
+                                <Label Text="{Binding Direccion}"/>
+                            </StackLayout>
+                            
+                        
+                    </DataTemplate>
+                    
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </StackLayout>
+    </ContentPage.Content>
+
+
+</ContentPage>
